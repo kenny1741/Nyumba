@@ -43,9 +43,11 @@ export default function ImageGallery({ images, title }: Props) {
               key={i}
               onClick={() => setActive(i)}
               className={`flex-shrink-0 rounded-xl overflow-hidden transition-all ${
-                i === active ? "ring-2 ring-offset-2 opacity-100" : "opacity-60 hover:opacity-80"
+                i === active ? "ring-2 ring-offset-2 ring-[var(--terracotta)] opacity-100" : "opacity-60 hover:opacity-80"
+                //i === active ? "ring-2 ring-offset-2 opacity-100" : "opacity-60 hover:opacity-80"
               }`}
-              style={{ width: 80, height: 60, ringColor: "var(--terracotta)" }}
+              style={{ width: 80, height: 60 }}
+              //style={{ width: 80, height: 60, ringColor: "var(--terracotta)" }}
             >
               <img src={img} alt="" className="w-full h-full object-cover" />
             </button>
